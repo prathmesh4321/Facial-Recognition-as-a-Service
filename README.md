@@ -39,7 +39,7 @@ The AWS S3 or Simple Storage Service is a key-value store. It is used at two pla
 Further, in the serverless variant users upload videos to the input bucket stored in S3, and students’ academic information is stored as a file by the AWS Lambda function in the output bucket in S3.
 
 f. AWS Lambda : 
-The AWS Lambda function is triggered when a user uploads a video in S3. The lambda function performs facial recognition and uses the name of the first recognized face to search in DynamoDB for this person’s academic information. Finally, it stores the student information as a file in the output S3 bucket.
+The AWS Lambda function is triggered when a user uploads a video in S3. The lambda function consists of Python code that fetches videos from S3, performs facial recognition, and uses the name of the first recognized face to search in DynamoDB for this person’s academic information. Finally, it stores the student information as a file in the output S3 bucket.
 
 g. AWS DynamoDB : 
 The DynamoDB is preloaded with student information and is queried by the Lambda function for fetching student information.
